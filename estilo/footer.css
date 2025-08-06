@@ -1,0 +1,159 @@
+.footer {
+    background: #000;
+}
+
+.footer-container {
+    max-width: 1200px;
+    padding: 120px 20px 60px 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    justify-items: center;
+    gap: 100px;
+    color: #fff;
+    position: relative;
+}
+
+.footer-container::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 825px;
+    max-width: 100%;
+    height: 5px;
+    background: url(../img/Rectangle\ 52.svg) no-repeat center;
+    background-size: contain; /* garante que a imagem se ajuste */
+}
+
+.footer-texto {
+    align-self: center;
+    font-size: 1.5rem;
+    line-height: 1.33;
+    padding: 30px;
+    padding-left: 0px;
+    color: var(--c6);
+}
+
+.footer-contato {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.footer-contato li {
+    margin-bottom: 30px;
+}
+
+.email,
+.telefone,
+.instagram {
+    position: relative;
+}
+
+.email::before {
+    content:'';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../img/email.svg);
+    position: absolute;
+    left: -30px;
+    top: 10px;
+}
+
+.telefone::before {
+    content:'';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../img/telefone.svg);
+    position: absolute;
+    left: -30px;
+    top: 10px;
+}
+
+.instagram::before {
+    content:'';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../img/instagram.svg);
+    position: absolute;
+    left: -30px;
+    top: 10px;
+}
+
+li a {
+    color: #fff;
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+    color: var(--c8);
+    justify-self: start;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+    .footer-container {
+        gap: 25px;
+    }
+    
+    .footer-texto {
+        font-size: 1.25rem;
+    }
+
+    .footer-contato {
+        font-size: 1.5rem;
+    }
+
+    .footer-copy {
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: 860px) {
+    .footer-container {
+        gap: 0px;
+    }
+}
+
+@media (max-width: 800px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .footer-container::after {
+        background: url(../img/Rectangle\ 52-2.svg) no-repeat center;
+    }
+
+    .footer-contato {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .email::before {
+        top: 3px;
+    }
+
+    .telefone::before {
+        top: 3px;
+    }
+
+    .instagram::before {
+        top: 3px;
+    }
+}
+
+@media (max-width: 450px) {
+    .footer-contato {
+        font-size: 1.2rem;
+    }
+}
